@@ -3,8 +3,7 @@
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-browser = webdriver.Firefox()
-browser.get('https://gabrielecirulli.github.io/2048/')
+
 
 def play2048( times ):
     #TODO: write code in this function that:
@@ -12,6 +11,9 @@ def play2048( times ):
     # 2. uses the parameter 'times' to determine how many times your code will try to play the game
     # 3. for each 'time', press these keys in this order: UP, RIGHT, DOWN, LEFT
     # 4. print the final score after all tries to the screen
+
+    browser = webdriver.Firefox()
+    browser.get('https://gabrielecirulli.github.io/2048/')
 
     htmlElem = browser.find_element_by_tag_name('html')
     scoreElem = browser.find_element_by_class_name('score-container')
